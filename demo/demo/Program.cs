@@ -10,12 +10,7 @@ namespace demo
     {
         static void Main(string[] args)
         {
-            //init
-            //first do
-            //second do
-            //third do
-            //fourth do
-            //fifth do
+            //do something
         }
     }
 }
