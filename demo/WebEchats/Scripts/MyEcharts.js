@@ -233,6 +233,18 @@
                     name: name || '',
                     splitArea: { show: true }
                 }],
+                calculable: true,
+
+                toolbox: {
+                    show: true,
+                    feature: {
+                        mark: { show: true },
+                        dataView: { show: true, readOnly: true },
+                        restore: { show: true },
+                        saveAsImage: { show: true }
+                    }
+                },
+
                 series: bars_dates.series
             };
             return $.extend({}, ECharts.ChartOptionTemplates.CommonLineOption, option);
