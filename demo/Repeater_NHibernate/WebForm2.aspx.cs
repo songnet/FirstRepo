@@ -20,57 +20,30 @@ namespace Repeater_NHibernate
         {
             if (!IsPostBack)
             {
-                num.Text = "1";
-                repdatabind();
+                GvDemoBind();
             }
         }
 
-        public void repdatabind()
+        protected void GvDemoBind()
         {
-            PagedDataSource pds = new PagedDataSource();
+            var query = isession.CreateCriteria(typeof(SchoolModel));
+                //.Add(Restrictions.Eq("SchoolName", "qinghua"));
+
+            var list1 = query.List<SchoolModel>();
 
 
-            pds.AllowPaging = true;//允许分页
-            pds.PageSize = 8;//单页显示项数
-
-            int curpage = Convert.ToInt32(num.Text);
-            this.BtnDown.Enabled = true;
-            this.BtnUp.Enabled = true;
-            pds.CurrentPageIndex = curpage - 1;
-            if (curpage == 1)
-            {
-                this.BtnUp.Enabled = false;
-            }
-            if (curpage == pds.PageCount)
-            {
-                this.BtnDown.Enabled = false;
-            }
-
-            int itemStart = (curpage - 1) * pds.PageSize;
-
-
+            int itemStart = (UCPagingHelper.PageIndex - 1) * UCPagingHelper.PageSize;
             IList<SchoolModel> list44 = null;
             list44 = isession.CreateCriteria(typeof(SchoolModel))
                .SetFirstResult(itemStart)
-               .SetMaxResults(pds.PageSize)
+               .SetMaxResults(UCPagingHelper.PageSize)
                .List<SchoolModel>();
 
+            gvDemo.DataSource = list44;
+            gvDemo.DataBind();
+            UCPagingHelper.TotalItemCount = list1.Count();
 
-            pds.DataSource = list44;
-
-            this.Repeater1.DataSource = pds;
-            this.Repeater1.DataBind();
         }
 
-        protected void BtnUp_Click(object sender, EventArgs e)
-        {
-            this.num.Text = Convert.ToString(Convert.ToInt32(num.Text) - 1);
-            repdatabind();
-        }
-        protected void BtnDown_Click(object sender, EventArgs e)
-        {
-            this.num.Text = Convert.ToString(Convert.ToInt32(num.Text) + 1);
-            repdatabind();
-        }
     }
 }
