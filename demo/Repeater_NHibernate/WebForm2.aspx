@@ -10,66 +10,36 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <table>
-                <tr>
-                    <td class="style1" align="left">hehe</td>
-                </tr>
+            <asp:Panel ID="Panel1" runat="server" Height="173px">
+                <asp:Repeater ID="Repeater1" runat="server">
+                    <HeaderTemplate>
+                        <table border onmousedown="1">
+                            <tr>
+                                <td>头模板</td>
+                            </tr>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <tr>
+                            <td>序号：<%# ("ID") %></td>
+                        </tr>
+                        <tr>
+                            <td>编码：<%# ("SchoolName") %></td>
+                        </tr>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                        <tr>
+                            <td>脚模板</td>
+                        </tr>
+                        </table></FooterTemplate>
+                </asp:Repeater>
+                当前页：<asp:Label ID="num" runat="server"></asp:Label>
+                <br />
+                <asp:Button ID="BtnUp" runat="server" OnClick="BtnUp_Click" Text="上一页" />
+                <asp:Button ID="BtnDown" runat="server" OnClick="BtnDown_Click" Text="下一页" />
+            </asp:Panel>
+            <br />
+            <br />
 
-                <tr>
-                    <td class="style1">
-                        <asp:Repeater ID="Repeater1" runat="server">
-
-                            <HeaderTemplate>
-                                <table>
-                                    <tr>
-                                        <td>头模板</td>
-                                    </tr>
-                            </HeaderTemplate>
-                            <ItemTemplate>
-                                <tr>
-                                    <td><font color="red"> <%#("timekey")%></font></td>
-                                </tr>
-                            </ItemTemplate>
-                            <AlternatingItemTemplate>
-                                <tr>
-                                    <td><a href='Default.aspx?id=<%#"databaselogid" %>'><%#("SalesAmountQuota")%></a></td>
-                                </tr>
-                            </AlternatingItemTemplate>
-                            <FooterTemplate>
-                                <tr>
-                                    <td>尾模板</td>
-                                </tr>
-                                </table></FooterTemplate>
-                        </asp:Repeater>
-                    </td>
-                </tr>
-
-
-                <tr>
-                    <td class="style1">
-                        <asp:HyperLink ID="first" runat="server">首页</asp:HyperLink>
-                        <asp:HyperLink ID="next" runat="server">下一页</asp:HyperLink>
-                        <asp:HyperLink ID="up" runat="server">上一页</asp:HyperLink>
-                        <asp:HyperLink ID="last" runat="server">末页</asp:HyperLink>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="style1">当前页为：<asp:Label ID="lblCurrentPage" runat="server"
-                        Text="Label"></asp:Label>&nbsp;
-                共<asp:Label ID="labPage" runat="server" Text="Label"></asp:Label>
-                        页</td>
-                    <td class="style1" style="height: 21px">
-                        <asp:HyperLink ID="HyperLink1" runat="server">首页</asp:HyperLink>
-
-                        <asp:HyperLink ID="HyperLink2" runat="server">上一页</asp:HyperLink>
-                        <asp:HyperLink ID="HyperLink3" runat="server">下一页</asp:HyperLink>
-                        <asp:HyperLink ID="HyperLink4" runat="server">末页</asp:HyperLink>
-                    </td>
-                </tr>
-
-
-            </table>
         </div>
     </form>
 </body>

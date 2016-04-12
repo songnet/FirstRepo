@@ -16,79 +16,61 @@ namespace Repeater_NHibernate
 
         private ISession isession = new NHibernateHelper().GetSession();
 
-        private void con()
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                num.Text = "1";
+                repdatabind();
+            }
+        }
+
+        public void repdatabind()
         {
             PagedDataSource pds = new PagedDataSource();
 
-            //pds.DataSource = list44;
+
             pds.AllowPaging = true;//允许分页
             pds.PageSize = 8;//单页显示项数
-            int CurPage;
-            if (Request.QueryString["Page"] != null)
-                CurPage = Convert.ToInt32(Request.QueryString["Page"]);
-            else
-                CurPage = 1;
-            pds.CurrentPageIndex = CurPage - 1;
-            int Count = pds.PageCount;
 
-            lblCurrentPage.Text = "当前页：" + CurPage.ToString();
-            labPage.Text = Count.ToString();
-
-            if (!pds.IsFirstPage)
+            int curpage = Convert.ToInt32(num.Text);
+            this.BtnDown.Enabled = true;
+            this.BtnUp.Enabled = true;
+            pds.CurrentPageIndex = curpage - 1;
+            if (curpage == 1)
             {
-                this.first.NavigateUrl = Request.CurrentExecutionFilePath + "?Page=1";
-                this.last.NavigateUrl = Request.CurrentExecutionFilePath + "?Page=" + Convert.ToString(Count - 1); ;
-                up.NavigateUrl = Request.CurrentExecutionFilePath + "?Page=" + Convert.ToString(CurPage - 1);
+                this.BtnUp.Enabled = false;
             }
-            else
+            if (curpage == pds.PageCount)
             {
-                this.first.Visible = false;
-                this.last.Visible = false;
-
+                this.BtnDown.Enabled = false;
             }
 
-            if (!pds.IsLastPage)
-            {
-
-                next.NavigateUrl = Request.CurrentExecutionFilePath + "?Page=" + Convert.ToString(CurPage + 1);
-            }
-            else
-            {
-                this.first.Visible = false;
-                this.last.Visible = false;
-
-            }
+            int itemStart = (curpage - 1) * pds.PageSize;
 
 
-            var query = isession.CreateCriteria(typeof(SchoolModel)).Add(Restrictions.Eq("SchoolName", "qinghua"));
-
-            var list1 = query.List<SchoolModel>();
-
-            int itemStart = (CurPage - 1) * pds.PageSize;
             IList<SchoolModel> list44 = null;
             list44 = isession.CreateCriteria(typeof(SchoolModel))
                .SetFirstResult(itemStart)
                .SetMaxResults(pds.PageSize)
                .List<SchoolModel>();
 
-            Repeater1.DataSource = pds;
-            Repeater1.DataBind();
 
+            pds.DataSource = list44;
+
+            this.Repeater1.DataSource = pds;
+            this.Repeater1.DataBind();
         }
 
-
-        protected void Page_Load(object sender, EventArgs e)
+        protected void BtnUp_Click(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                con();
-                this.first.Visible = true;
-                this.last.Visible = true;
-                //this.Repeater1.DataSource = pds();
-                //this.Repeater1.DataBind();
-
-            }
-
+            this.num.Text = Convert.ToString(Convert.ToInt32(num.Text) - 1);
+            repdatabind();
+        }
+        protected void BtnDown_Click(object sender, EventArgs e)
+        {
+            this.num.Text = Convert.ToString(Convert.ToInt32(num.Text) + 1);
+            repdatabind();
         }
     }
 }
