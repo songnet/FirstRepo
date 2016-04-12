@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Transform;
+using NHibernate.Criterion;
 
 namespace Repeater_NHibernate
 {
@@ -19,42 +20,45 @@ namespace Repeater_NHibernate
             GvDemoBind();
         }
 
-        /// <summary>
-        /// 分页测试
-        /// </summary>
-        /// <param name="pageStart">开始查找的记录条</param>
-        /// <param name="pageLimit">显示数量</param>
-        /// <param name="sql"></param>
-        /// <returns></returns>
-
         protected void GvDemoBind()
         {
-            IList<SchoolModel> list1 = isession.QueryOver<SchoolModel>().List();
+            var query = isession.CreateCriteria(typeof(SchoolModel)).Add(Restrictions.Eq("SchoolName", "qinghua"));
 
-            #region
-            string sql = "SELECT * FROM T_School";
+            var list1 = query.List<SchoolModel>();
+
+
             int itemStart = (PagingHelper1.PageIndex - 1) * PagingHelper1.PageSize;
-            //sql += string.Format(" LIMIT {0},{1}", itemStart, PagingHelper1.PageSize);
-            IList<SchoolModel> list = isession.CreateSQLQuery(sql)
-                .SetFirstResult(itemStart)
-                .SetMaxResults(PagingHelper1.PageSize)
-                .SetResultTransformer(Transformers.AliasToBean<SchoolModel>()).List<SchoolModel>();
-            gvDemo.DataSource = list;
+            IList<SchoolModel> list44 = null;
+            list44 = isession.CreateCriteria(typeof(SchoolModel))
+               .Add(Restrictions.Eq("SchoolName", "qinghua"))
+               .SetFirstResult(itemStart)
+               .SetMaxResults(PagingHelper1.PageSize)
+               .List<SchoolModel>();
+
+
+            gvDemo.DataSource = list44;
             gvDemo.DataBind();
             PagingHelper1.TotalItemCount = list1.Count();
-            #endregion
 
         }
 
-
-        public IList<SchoolModel> GetCustomerListTest(int pageStart, int pageLimit, string sql)
+        private static ICriteria CreateQuery<T>(ISession session, SearchRequest searchRequest)
         {
-            IList<SchoolModel> customerList = isession.CreateSQLQuery(sql)
-                .SetFirstResult(pageStart)
-                .SetMaxResults(pageLimit)
-                .SetResultTransformer(Transformers.AliasToBean<SchoolModel>()).List<SchoolModel>();
-            return customerList;
+            return CreateQuery<T>(session, searchRequest, false);
         }
+        private static ICriteria CreateQuery<T>(ISession session, SearchRequest searchRequest, bool compareFirstCopyPercent)
+        {
+            var query = session.CreateCriteria(typeof(T));
+
+            if (searchRequest.ID != 0)
+                query.Add(Restrictions.Ge("ID", searchRequest.ID));
+
+            if (string.IsNullOrEmpty(searchRequest.SchoolName))
+                query.Add(Restrictions.Le("SchoolName", searchRequest.SchoolName));
+
+            return query;
+        }
+
 
         protected void PagingHelper1_OnPageIndexChanged(object sender, EventArgs e)
         {

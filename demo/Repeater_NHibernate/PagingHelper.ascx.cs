@@ -22,7 +22,7 @@ namespace Repeater_NHibernate
             {
                 if (m_PageSize.Equals(0))
                 {
-                    m_PageSize = 2;
+                    m_PageSize = 1;
                 }
                 return m_PageSize;
             }
@@ -56,10 +56,10 @@ namespace Repeater_NHibernate
         #region 受保护的方法
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
+            //if (!IsPostBack)
+            //{
                 BindPagingHelperControl();
-            }
+            //}
         }
         protected void lbtnPage_Click(object sender, EventArgs e)
         {
