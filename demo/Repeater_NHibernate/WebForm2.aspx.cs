@@ -29,9 +29,8 @@ namespace Repeater_NHibernate
         {
             PagedDataSource pds = new PagedDataSource();
 
-
             pds.AllowPaging = true;//允许分页
-            pds.PageSize = 8;//单页显示项数
+            pds.PageSize = 1;//单页显示项数
 
             int curpage = Convert.ToInt32(num.Text);
             this.BtnDown.Enabled = true;
@@ -58,7 +57,7 @@ namespace Repeater_NHibernate
 
             pds.DataSource = list44;
 
-            this.Repeater1.DataSource = pds;
+            this.Repeater1.DataSource = list44;
             this.Repeater1.DataBind();
         }
 

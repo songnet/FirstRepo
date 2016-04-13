@@ -12,25 +12,6 @@
         <div>
             <asp:Panel ID="Panel1" runat="server" Height="173px">
                 <asp:Repeater ID="Repeater1" runat="server">
-                    <HeaderTemplate>
-                        <table border onmousedown="1">
-                            <tr>
-                                <td>头模板</td>
-                            </tr>
-                    </HeaderTemplate>
-                    <ItemTemplate>
-                        <tr>
-                            <td>序号：<%# ("ID") %></td>
-                        </tr>
-                        <tr>
-                            <td>编码：<%# ("SchoolName") %></td>
-                        </tr>
-                    </ItemTemplate>
-                    <FooterTemplate>
-                        <tr>
-                            <td>脚模板</td>
-                        </tr>
-                        </table></FooterTemplate>
                 </asp:Repeater>
                 当前页：<asp:Label ID="num" runat="server"></asp:Label>
                 <br />
