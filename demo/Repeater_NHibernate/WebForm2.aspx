@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="Repeater_NHibernate.WebForm2" %>
 
-<%@ Register Src="~/UCPagingHelper.ascx" TagPrefix="uc1" TagName="UCPagingHelper" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -12,10 +10,17 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="gvDemo" runat="server">
-            </asp:GridView>
+            <asp:Panel ID="Panel1" runat="server" Height="173px">
+                <asp:Repeater ID="Repeater1" runat="server">
+                </asp:Repeater>
+                当前页：<asp:Label ID="num" runat="server"></asp:Label>
+                <br />
+                <asp:Button ID="BtnUp" runat="server" OnClick="BtnUp_Click" Text="上一页" />
+                <asp:Button ID="BtnDown" runat="server" OnClick="BtnDown_Click" Text="下一页" />
+            </asp:Panel>
             <br />
-            <uc1:UCPagingHelper runat="server" id="UCPagingHelper" PageSize="2" />
+            <br />
+
         </div>
     </form>
 </body>
