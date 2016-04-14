@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bar.html" />
     <Content Include="packages.config" />
     <Content Include="ajax\Handler.ashx" />
     <None Include="Web.Debug.config">
@@ -78,7 +79,9 @@
   <ItemGroup>
     <Content Include="Index.html" />
     <Content Include="Scripts\echarts\echarts-map.js" />
+    <Content Include="Scripts\echarts\echarts-plain-map.js" />
     <Content Include="Scripts\echarts\echarts.js" />
+    <Content Include="Scripts\echarts\echarts.min.js" />
     <Content Include="Scripts\echarts\esl.js" />
     <Content Include="Scripts\jquery-1.8.3.min.js" />
     <Content Include="Scripts\MyEcharts.js" />

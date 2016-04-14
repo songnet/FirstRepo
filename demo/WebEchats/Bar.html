@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="Scripts/jquery-1.8.3.min.js"></script>
+    <script src="Scripts/echarts/echarts.min.js"></script>
+
+    <title>EchartsBar</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+
+        $(function () {
+
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    //text: 'ECharts 入门示例'
+                },
+                tooltip: {},
+                toolbox: {
+                    show: true,
+                    feature: {
+                        dataView: { show: true, readOnly: false },
+                        restore: { show: true },
+                        saveAsImage: { show: true }
+                    }
+                },
+                calculable: true,
+                legend: {
+                    data: ['论文初审情况']
+                },
+                xAxis: {
+                    data: ["送检论文总人数", "一次性通过人数", "修正后通过人数", "未通过人数"]
+                },
+                yAxis: [
+                    {
+                        type: 'value',
+                        axisLabel: {
+                            formatter: '{value} 人'
+                        },
+                        splitNumber: 1
+                    }
+                ],
+                series: [{
+                    name: '论文初审情况',
+                    type: 'bar',
+                    barMaxWidth: 60,
+                    itemStyle: {
+                        normal: {
+                            color: function (params) {
+                                // build a color map as your need.
+                                var colorList = [
+                                  '#1b5e00', '#68831c', '#80ad44', '#f29901'
+                                ];
+                                return colorList[params.dataIndex]
+                            },
+
+                            label: {
+                                show: true,
+                                position: 'top',
+                                //formatter: '{c}人'
+                                formatter: function (params, ticket, callback) {
+                                    console.log(params);
+                                    if (params.name == "未通过人数") {
+                                        alert("123")
+                                    }
+                                    //var res = params[0].name;
+                                    //for (var i = 0, l = params.length; i < l; i++) {
+                                    //    res += '<br/>' + params[i].seriesName + ' : ' + params[i].value;
+                                    //}
+                                    //    setTimeout(function () {
+                                    //        // 仅为了模拟异步回调
+                                    //        callback(ticket, res);
+                                    //    }, 1000)
+                                    //    return 'loading';
+                                }
+                                //formatter: "Template formatter: <br/>{b}<br/>{a}:{c}<br/>{a1}:{c1}"
+                            }
+                        }
+                    },
+                    data: [2, 2, 2, 2]
+                }]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+            //myChart.on(echarts.config.EVENT.CLICK, eConsole);
+            //function eConsole(param) {
+            //    alert(param.value);
+            //}
+
+        })
+    </script>
+
+</head>
+<body>
+    <div id="main" style="width: 780px; height: 400px;"></div>
+
+</body>
+</html>
