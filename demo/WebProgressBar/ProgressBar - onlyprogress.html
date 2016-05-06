@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet" />
+    <script src="jquery-1.8.2.min.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <title></title>
+    <script>
+        $(function () {
+            var progressTimer,
+              progressbar = $("#progressbar"),
+              dialog = $("#dialog").dialog({
+                  autoOpen: false,
+                  closeOnEscape: false,
+                  resizable: false,
+                  //打开时延迟
+                  open: function () {
+                      progressTimer = setTimeout(progress, 0);
+                  },
+                  //关闭progressbar时function
+                  beforeClose: function () {
+                      //alert("complete")
+                      downloadButton.button("option", {
+                          disabled: false,
+                          label: "Start Download"
+                      });
+                  }
+              }),
+              downloadButton = $("#downloadButton")
+                .button()
+                .on("click", function () {
+                    $(this).button("option", {
+                        disabled: true,
+                        label: "Downloading..."
+                    });
+                    dialog.dialog("open");
+                });
+            //进行function
+            progressbar.progressbar({
+                //完成时function
+                complete: function () {
+                   
+                    clearTimeout(progressTimer);
+                    dialog
+                      .dialog("close");
+                    progressbar.progressbar("value", false);
+                   
+                    downloadButton.focus();
+                }
+            });
+
+
+            function progress() {
+                var val = progressbar.progressbar("value") || 0;
+                console.log(val);
+                progressbar.progressbar("value", val + Math.floor(Math.random() * 3));
+
+                if (val <= 99) {
+                    progressTimer = setTimeout(progress, 100);
+                }
+            }
+
+        });
+    </script>
+    <style>
+        #progressbar {
+            margin-top: 20px;
+        }
+        .ui-dialog-titlebar-close {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="dialog" title="检测进行中...">
+        <div id="progressbar"></div>
+    </div>
+    <button id="downloadButton">Start Download</button>
+
+</body>
+</html>
