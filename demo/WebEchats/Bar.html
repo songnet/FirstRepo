@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="Scripts/echarts/echarts.js"></script>
+
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'Scripts/echarts'
+            }
+        });
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+
+                var ecConfig = require('echarts/config');
+
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main'));
+
+
+                // 指定图表的配置项和数据
+                var option = {
+                    title: {
+                        //text: 'ECharts 入门示例'
+                    },
+                    tooltip: {},
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            dataView: { show: true, readOnly: false },
+                            restore: { show: true },
+                            saveAsImage: { show: true }
+                        }
+                    },
+                    calculable: true,
+                    legend: {
+                        data: ['论文初审情况']
+                    },
+                    xAxis: {
+                        data: ["送检论文总人数", "一次性通过人数", "修正后通过人数", "未通过人数"]
+                    },
+                    yAxis: [
+                        {
+                            type: 'value',
+                            axisLabel: {
+                                formatter: '{value} 人'
+                            },
+                            splitNumber: 1
+                        }
+                    ],
+                    series: [{
+                        name: '论文初审情况',
+                        type: 'bar',
+                        barMaxWidth: 60,
+                        itemStyle: {
+                            normal: {
+                                color: function (params) {
+                                    // build a color map as your need.
+                                    var colorList = [
+                                      '#1b5e00', '#68831c', '#80ad44', '#f29901'
+                                    ];
+                                    return colorList[params.dataIndex]
+                                },
+                                label: {
+                                    show: true,
+                                    position: 'top',
+                                    formatter: '{c}人'
+                                }
+                            }
+                        },
+                        data: [10, 6, 3, 1]
+                    }]
+                };
+
+
+                myChart.on(ecConfig.EVENT.CLICK, function (param) {
+                    //console.log(param)
+                    if (param.name == "未通过人数") {
+                        alert("未通过");
+
+                    }
+                    //alert(param.value);
+                });
+
+                // 为echarts对象加载数据
+                myChart.setOption(option, true);
+            }
+        );
+    </script>
+</head>
+<body>
+    <!-- 为 ECharts 准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+
+</body>
+</html>

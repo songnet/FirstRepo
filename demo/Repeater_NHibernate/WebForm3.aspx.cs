@@ -63,7 +63,7 @@ namespace Repeater_NHibernate
 
             AspNetPager1.AlwaysShow = true;
             AspNetPager1.RecordCount = list1.Count;
-            AspNetPager1.PageSize = 10;
+            AspNetPager1.PageSize = 5;
         }
 
         //搜索  

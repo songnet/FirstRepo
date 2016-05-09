@@ -8,6 +8,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <script src="jquery-1.8.3.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -53,15 +54,46 @@
                         CustomInfoHTML="[第 %CurrentPageIndex% / %PageCount% 页] [共%RecordCount%条 %PageSize%条/页]　"
                         FirstPageText="首页" LastPageText="尾页" LayoutType="Table" NextPageText="后一页"
                         OnPageChanging="AspNetPager1_PageChanging" PrevPageText="上一页"
-                        ShowCustomInfoSection="Right" ShowPageIndexBox="Always" SubmitButtonText="Go"
+                        ShowCustomInfoSection="Right" UrlPaging="true" UrlPageSizeName="pagesize" UrlPageIndexName="pageindex" ShowPageIndexBox="Always" SubmitButtonText="Go"
                         TextAfterPageIndexBox="页" TextBeforePageIndexBox="转到" ShowBoxThreshold="20"
                         PagingButtonSpacing="8px" CenterCurrentPageButton="True"
                         CustomInfoSectionWidth="30%" PageIndexBoxType="DropDownList" PageSize="15"
                         ShowPrevNext="False">
                     </Webdiyer:AspNetPager>
+                    每页显示记录数：<select id="selsize">
+                        <option value="1">1条</option>
+                        <option value="2">2条</option>
+                        <option value="3">3条</option>
+                    </select>
                 </div>
             </div>
         </div>
     </form>
 </body>
 </html>
+
+<script type="text/javascript">
+
+    var aaa = "";
+    $("#selsize").change(function () {
+
+        aaa = ($("#selsize").val())
+
+        var lo = "WebForm3.aspx?pagesize=" + aaa;
+        window.location.href = (lo);
+
+    })
+
+    //var aaa = "";
+
+    ///////////////手动触发selectd的change事件////////////////  
+    //$("#selsize").change(function () {
+    //    aaa = $("#selsize  option:selected").text();
+    //});
+    //$("#selsize").trigger("change");
+    ///////////////手动触发selectd的change事件////////////////  
+
+    //var lo = "WebForm3.aspx?pagesize=" + aaa;
+    //window.location.href = (lo);
+
+</script>
