@@ -1,7 +1,6 @@
 ﻿<head>
     <meta charset="utf-8">
     <title>ECharts</title>
-    <script src="js/echarts.js"></script>
     <script src="js/esl.js"></script>
 </head>
 <body>
@@ -68,13 +67,6 @@
                         }
                     ]
                 };
-
-                window.onresize = myChart.resize;
-                var ecConfig = require('echarts/config');
-
-                myChart.on(ecConfig.EVENT.CLICK, function (param) {
-                    alert(param.value);
-                });
 
                 // 为echarts对象加载数据
                 myChart.setOption(option);
