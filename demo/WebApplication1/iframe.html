@@ -1,5 +1,5 @@
 <link href="Css/tccdiv_style.css" rel="stylesheet" />
-
+<script src="js/jquery-1.8.2.min.js"></script>
 <div class="leftone">
     <div class="titleone">
         &nbsp; &nbsp; &nbsp; &nbsp;专利保护服务系统，基于万方数据<font color="#ff7e00">海量专利主权项</font>和<font color="#ff7e00">先进的检测技术</font>，对用户送检的专利成果进行<font color="#ff7e00">相似性检测</font>，并提供客观详实的<font color="#ff7e00">检测报告</font>，从而为用户的专利成果提供<font color="#ff7e00">保护服务</font>。
@@ -8,10 +8,33 @@
         <b>送检文本：</b>
     </div>
     <textarea id="txtsj" onfocus="if(value=='建议字数不少于五个字'){value=''}" onblur="if (value ==''){value='建议字数不少于五个字'}" name="" cols="" rows="" class="text">建议字数不少于五个字</textarea>
-    <span id="msg" style="color: red">词组输入，用检索功能更有效哦！</span>
+    <span id="msg" style="color: red;display:block;height:25px"></span>
     <div class="anniu">
         <input type="button" name="button" id="butsub" value="开始检测" class="add" />
         &nbsp;
         <input type="button" name="button2" id="butclear" value="清空文本" class="ad" />
     </div>
 </div>
+
+<script type="text/javascript">
+
+    //点击清空
+    $("#butclear").click(function () {
+        $("#txtsj").val("");
+    });
+
+    //点击提交
+    $("#butsub").click(function () {
+        var txt = $("#txtsj").val();
+        if (txt == "" || txt == "建议字数不少于五个字") {
+            $("#txtsj").css("border", "thin solid #FF0000");
+            return;
+        }
+        if (txt.length <= 5) {
+            $("#msg").html("词组输入，用检索功能更有效哦！");
+        }
+
+
+    });
+
+</script>

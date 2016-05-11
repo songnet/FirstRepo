@@ -106,7 +106,7 @@
     <Content Include="Css\tccdiv_style.css" />
     <Content Include="iframe.html" />
     <Content Include="image\close.fw.png" />
-    <Content Include="image\jquery-webox.css" />
+    <Content Include="Css\jquery-webox.css" />
     <Content Include="index.html" />
     <Content Include="js\jquery-1.8.2.min.js" />
     <Content Include="js\jquery-webox.js" />
