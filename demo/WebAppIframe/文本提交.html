@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/jquery-1.8.2.min.js"></script>
+    <link href="../CSS/tccdiv_style.css" rel="stylesheet" />
+    <title></title>
+
+</head>
+
+<body>
+
+    <div id="bg"></div>
+    <div class="box" style="display: none">
+        <div class="one">
+            <div class="leftone">
+                <div class="titleone">
+                    &nbsp; &nbsp; &nbsp; &nbsp;专利保护服务系统，基于万方数据<font color="#ff7e00">海量专利主权项</font>和<font color="#ff7e00">先进的检测技术</font>，对用户送检的专利成果进行<font color="#ff7e00">相似性检测</font>，并提供客观详实的<font color="#ff7e00">检测报告</font>，从而为用户的专利成果提供<font color="#ff7e00">保护服务</font>。
+                </div>
+                <div class="four">
+                    <b>送检文本：</b>
+                </div>
+                <textarea id="txtsj" onfocus="if(value=='建议字数不少于五个字'){value=''}" onblur="if (value ==''){value='建议字数不少于五个字'}" name="" cols="" rows="" class="text">建议字数不少于五个字</textarea>
+                <span id="msg" style="color: red">词组输入，用检索功能更有效哦！</span>
+                <div class="anniu">
+                    <input type="button" name="button" id="butsub" value="开始检测" class="add" />
+                    &nbsp;
+                    <input type="button" name="button2" id="butclear" value="清空文本" class="ad" />
+                </div>
+            </div>
+            <div class='right'>
+                <a href="#" class="close">
+                    <img src="Images/close_03.png" width="33" height="32" />
+                </a>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    $(function () {
+        //少于5字提示信息
+        $("#msg").css("display", "none");
+
+        var hi = $(document).height();
+        alert(hi);
+        $("#bg").css({
+            display: "block", height: hi
+        });
+        var $box = $('.box');
+        $box.css({
+            //设置弹出层距离左边的位置
+            left: ($("body").width() - $box.width()) / 2 - 20 + "px",
+            //设置弹出层距离上面的位置
+            top: ($(window).height() - $box.height()) / 2 + $(window).scrollTop() + "px",
+            display: "block"
+        });
+
+        //点击关闭按钮的时候，遮罩层关闭
+        $(".close").click(function () {
+            $("#bg,.box").css("display", "none");
+
+        });
+
+        //点击清空
+        $("#butclear").click(function () {
+            $("#txtsj").val("");
+        });
+
+        //点击提交
+        $("#butsub").click(function () {
+            var txt = $("#txtsj").val();
+            if (txt == "" || txt == "建议字数不少于五个字") {
+                $("#txtsj").css("border", "thin solid #FF0000");
+                return;
+            }
+            //console.log(txt.length);
+            if (txt.length <= 5) {
+                $("#msg").css("display", "block");
+            }
+
+
+        });
+
+    })
+</script>

@@ -15,8 +15,8 @@
                   closeOnEscape: false,
                   resizable: false,
                   //打开时延迟
-                  open: function () {
-                      progressTimer = setTimeout(progress, 180000);//等待3min
+                  open: function () { 
+                      progressTimer = setTimeout(progress, 100);//等待3min 180000
                   },
                   beforeClose: function () {
                       downloadButton.button("option", {

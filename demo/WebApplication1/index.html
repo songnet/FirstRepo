@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jquery弹出层/iframe弹出层调用,背景变暗效果并且可拖动特效</title>
+
+    <link href="image/jquery-webox.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery-webox.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //iframe弹出层调用
+            $('#outside').click(function () {
+                $.webox({
+                    height: 600,
+                    width: 843,
+                    border:0,
+                    bgvisibel: true,
+                    title: '',
+                    iframe: '/iframe.html'
+                });
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <a class="Button blueButton Button18" href="javascript:void(0);" id="outside"><strong>点我iframe弹出层调用</strong></a>
+
+</body>
+</html>

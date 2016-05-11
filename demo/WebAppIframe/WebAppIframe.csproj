@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{95FB3B1A-72F4-4550-8C73-49AD23B3E38E}</ProjectGuid>
+    <ProjectGuid>{CF13487D-FC6A-4F6D-9CFD-80D7B393D27D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebProgressBar</RootNamespace>
-    <AssemblyName>WebProgressBar</AssemblyName>
+    <RootNamespace>WebAppIframe</RootNamespace>
+    <AssemblyName>WebAppIframe</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -66,7 +66,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\tccdiv_style.css" />
+    <Content Include="DemoLayer.html" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="images\close_03.png" />
+    <Content Include="jquery-1.8.2.min.js" />
+    <Content Include="layer\extend\layer.ext.js" />
+    <Content Include="layer\layer.js" />
+    <Content Include="layer\skin\default\icon-ext.png" />
+    <Content Include="layer\skin\default\icon.png" />
+    <Content Include="layer\skin\default\loading-0.gif" />
+    <Content Include="layer\skin\default\loading-1.gif" />
+    <Content Include="layer\skin\default\loading-2.gif" />
+    <Content Include="layer\skin\layer.css" />
+    <Content Include="layer\skin\layer.ext.css" />
     <Content Include="packages.config" />
+    <Content Include="文本提交.html" />
+    <Content Include="检测.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,37 +91,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="jquery-1.8.2.min.js" />
-    <Content Include="jquery-ui-1.11.4\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-bg_flat_10_000000_40x100.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-bg_glass_100_f6f6f6_1x400.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-bg_glass_100_fdf5ce_1x400.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-icons_222222_256x240.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-icons_228ef1_256x240.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-icons_ef8c08_256x240.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-icons_ffd27a_256x240.png" />
-    <Content Include="jquery-ui-1.11.4\images\ui-icons_ffffff_256x240.png" />
-    <Content Include="jquery-ui-1.11.4\index.html" />
-    <Content Include="jquery-ui-1.11.4\jquery-ui.css" />
-    <Content Include="jquery-ui-1.11.4\jquery-ui.js" />
-    <Content Include="jquery-ui-1.11.4\jquery-ui.min.css" />
-    <Content Include="jquery-ui-1.11.4\jquery-ui.min.js" />
-    <Content Include="jquery-ui-1.11.4\jquery-ui.structure.css" />
-    <Content Include="jquery-ui-1.11.4\jquery-ui.structure.min.css" />
-    <Content Include="jquery-ui-1.11.4\jquery-ui.theme.css" />
-    <Content Include="jquery-ui-1.11.4\jquery-ui.theme.min.css" />
-    <Content Include="ProgressBar - backup.html" />
-    <Content Include="ProgressBar - onlydelay.html" />
-    <Content Include="ProgressBar - onlyprogress.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="js\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -120,9 +112,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>18217</DevelopmentServerPort>
+          <DevelopmentServerPort>53622</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:18217/</IISUrl>
+          <IISUrl>http://localhost:53622/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
