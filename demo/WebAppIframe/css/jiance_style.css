@@ -1,0 +1,286 @@
+/* CSS Document CSS Document */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'microsoft yahei';
+    font-size: 14px;
+}
+
+.two {
+    width: 829px;
+    background-color: #fff;
+    margin: 0px auto;
+}
+
+.topone {
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
+    border-bottom: 3px solid #666666;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.next {
+    height: 505px;
+}
+
+.left {
+    float: left;
+    width: 715px;
+    height: 600px;
+    margin-left: 57px;
+    margin-top: 15px;
+    background-color: #FFF;
+}
+
+.clear {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+.word {
+    width: 705px;
+    height: 75px;
+    margin-top: 10px;
+    border: 1px solid #dddddd;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: #000;
+}
+
+.title {
+    width: 358px;
+    height: 11px;
+    font-size: 14px;
+    color: #034b99;
+    margin-top: 0px;
+    text-align: left;
+    padding: 11px 18px 11px;
+}
+
+.text {
+    width: 300px;
+    height: 20px;
+}
+
+.bm {
+    width: 705px;
+    height: 35px;
+    padding-top: 30px;
+    font-weight: normal;
+    line-height: 35px;
+    padding-left: 10px;
+}
+
+.bmm {
+    width: 705px;
+    height: 35px;
+    font-weight: normal;
+    line-height: 35px;
+    padding-left: 10px;
+}
+
+.four {
+    width: 705px;
+    height: 35px;
+    font-weight: normal;
+    background: #edf4fc;
+    line-height: 35px;
+    padding-left: 10px;
+}
+
+.boxhtml {
+    background-color: #FFF;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    overflow: auto;
+}
+
+.boxone {
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+}
+
+.words {
+    width: 100%;
+    height: 33px;
+    border: 1px solid #dddddd;
+    color: #000000;
+    text-align: center;
+    background: #edf4fc;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.inbox {
+    width: 100%;
+    height: 88px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+td {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.search {
+    float: left;
+    font-size: 14px;
+    color: #666666;
+    padding-top: 8px;
+    width: 714px;
+    margin-left: 57px;
+    line-height: 10px;
+}
+
+.right {
+    float: right;
+    width: 33px;
+    height: 685px;
+    margin-right: 14px;
+    margin-top: 15px;
+}
+
+.one {
+    width: 843px;
+    height: 575px;
+    background-color: #fff;
+    margin: 0px auto;
+}
+
+.leftone {
+    float: left;
+    width: 715px;
+    height: 500px;
+    margin-left: 74px;
+    margin-top: 70px;
+    background-color: #FFF;
+    position: relative;
+}
+
+.titleone {
+    line-height: 140%;
+    height: 40px;
+    margin: 15px 0px;
+    font-weight: 600;
+    color: #999;
+    letter-spacing: 1px;
+}
+
+.text {
+    width: 709px;
+    height: 302px;
+    margin-top: 10px;
+    border: 1px solid #dddddd;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: #000;
+    align: center;
+}
+
+.add {
+    width: 110px;
+    height: 40px;
+    line-height: 26px;
+    background: #70a4e5;
+    font-size: 14px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.ad {
+    width: 110px;
+    height: 40px;
+    line-height: 26px;
+    background: #e68e8e;
+    font-size: 14px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.anniu {
+    width: 250px;
+    height: 40px;
+    text-align: right;
+    padding-top: 16px;
+    position: absolute;
+    right: 0px;
+}
+
+/* box */
+.box {
+    position: absolute;
+    width: 843px;
+    left: 50%;
+    height: auto;
+    z-index: 100;
+    background-color: #fff;
+    border: 1px #ddd solid;
+    padding: 1px;
+}
+
+    .box h2 {
+        height: 25px;
+        font-size: 14px;
+        background-color: #aaa;
+        position: relative;
+        padding-left: 10px;
+        line-height: 25px;
+        color: #fff;
+    }
+
+        .box h2 a {
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #fff;
+        }
+
+    .box .list {
+        padding: 10px;
+    }
+
+        .box .list li {
+            height: 24px;
+            line-height: 24px;
+        }
+
+            .box .list li span {
+                margin: 0 5px 0 0;
+                font-family: "ËÎÌå";
+                font-size: 12px;
+                font-weight: 400;
+                color: #ddd;
+            }
+
+.showbtn {
+    font: bold 24px 'Î¢ÈíÑÅºÚ';
+}
+
+#bg {
+    background-color: #666;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+}
