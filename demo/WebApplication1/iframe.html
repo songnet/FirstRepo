@@ -1,5 +1,6 @@
 <link href="Css/tccdiv_style.css" rel="stylesheet" />
 <script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery-webox.js"></script>
 <div class="leftone">
     <div class="titleone">
         &nbsp; &nbsp; &nbsp; &nbsp;专利保护服务系统，基于万方数据<font color="#ff7e00">海量专利主权项</font>和<font color="#ff7e00">先进的检测技术</font>，对用户送检的专利成果进行<font color="#ff7e00">相似性检测</font>，并提供客观详实的<font color="#ff7e00">检测报告</font>，从而为用户的专利成果提供<font color="#ff7e00">保护服务</font>。
@@ -25,14 +26,24 @@
 
     //点击提交
     $("#butsub").click(function () {
-        var txt = $("#txtsj").val();
-        if (txt == "" || txt == "建议字数不少于五个字") {
-            $("#txtsj").css("border", "thin solid #FF0000");
-            return;
-        }
-        if (txt.length <= 5) {
-            $("#msg").html("词组输入，用检索功能更有效哦！");
-        }
+        //var txt = $("#txtsj").val();
+        //if (txt == "" || txt == "建议字数不少于五个字") {
+        //    $("#txtsj").css("border", "thin solid #FF0000");
+        //    return;
+        //}
+        //if (txt.length <= 5) {
+        //    $("#msg").html("词组输入，用检索功能更有效哦！");
+        //}
+
+        //iframe弹出层调用
+        $.webox({
+            height: 650,
+            width: 843,
+            border: 0,
+            bgvisibel: true,
+            title: '',
+            iframe: '/检测.html'
+        });
 
 
     });
