@@ -97,6 +97,7 @@
     <Content Include="Css\jiance_style.css" />
     <Content Include="packages.config" />
     <Content Include="检测.html" />
+    <Content Include="段落高亮.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
