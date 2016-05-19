@@ -1,5 +1,6 @@
 <link href="Css/tccdiv_style.css" rel="stylesheet" />
 <script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery-webox.js"></script>
 <div class="leftone">
     <div class="titleone">
     </div>
@@ -24,14 +25,24 @@
 
     //点击提交
     $("#butsub").click(function () {
-        var txt = $("#txtsj").val();
-        if (txt == "" || txt == "建议字数不少于五个字") {
-            $("#txtsj").css("border", "thin solid #FF0000");
-            return;
-        }
-        if (txt.length <= 5) {
-            $("#msg").html("词组输入，用检索功能更有效哦！");
-        }
+        //var txt = $("#txtsj").val();
+        //if (txt == "" || txt == "建议字数不少于五个字") {
+        //    $("#txtsj").css("border", "thin solid #FF0000");
+        //    return;
+        //}
+        //if (txt.length <= 5) {
+        //    $("#msg").html("词组输入，用检索功能更有效哦！");
+        //}
+
+        //iframe弹出层调用
+        $.webox({
+            height: 650,
+            width: 843,
+            border: 0,
+            bgvisibel: true,
+            title: '',
+            iframe: '/检测.html'
+        });
 
 
     });
