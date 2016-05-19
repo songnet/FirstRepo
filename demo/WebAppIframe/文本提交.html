@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="jquery-1.8.2.min.js"></script>
+    <script src="layer/layer.js"></script>
     <link href="css/tccdiv_style.css" rel="stylesheet" />
     <title></title>
 
@@ -38,6 +39,15 @@
     $("#butsub").click(function () {
         var txt = $("#txtsj").val();
         if (txt == "" || txt == "建议字数不少于五个字") {
+            layer.open({
+                scrollbar: false,
+                type: 2,
+                title: '',
+                maxmin: false,
+                shadeClose: false, //点击遮罩关闭层
+                area: ['843px', '700px'],// width  height
+                content: '检测.html'
+            });
             $("#txtsj").css("border", "thin solid #FF0000");
             return;
         }
@@ -45,6 +55,7 @@
             $("#msg").html("词组输入，用检索功能更有效哦！");
         }
 
+       
 
     });
 

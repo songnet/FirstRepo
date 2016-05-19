@@ -10,6 +10,7 @@
 
 <body>
     <input type='button' id='btn1' value='弹出层' />
+    <div style="height:1000px"></div>
 
 </body>
 </html>
@@ -17,6 +18,7 @@
 
     $('#btn1').on('click', function () {
         layer.open({
+            scrollbar: false,
             type: 2,
             title: '',
             maxmin: false,

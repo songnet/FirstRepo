@@ -22,7 +22,7 @@
                   buttons: dialogButtons,
                   //打开时延迟
                   open: function () {
-                      progressTimer = setTimeout(progress, 1000);
+                      progressTimer = setTimeout(progress, 0);
                   },
                   beforeClose: function () {
                       downloadButton.button("option", {
@@ -49,6 +49,7 @@
                 //完成时function
                 complete: function () {
                     progressLabel.text("Complete!");
+                    alert("123");
                     dialog.dialog("option", "buttons", [{
                         text: "Close",
                         click: closeDownload
