@@ -35,17 +35,17 @@
                         label: "Downloading..."
                     });
                     dialog.dialog("open");
+
                 });
             //进行function
             progressbar.progressbar({
                 //完成时function
                 complete: function () {
-                    alert("1");
                     clearTimeout(progressTimer);
                     dialog
                       .dialog("close");
                     progressbar.progressbar("value", false);
-                   
+
                     downloadButton.focus();
                 }
             });
@@ -53,12 +53,27 @@
 
             function progress() {
                 var val = progressbar.progressbar("value") || 0;
-                console.log(val);
-                progressbar.progressbar("value", val + Math.floor(Math.random() * 3));
+              
+                $.ajax({
+                    type: "GET",
+                    url: "Handler1.ashx",
+                    data: {},
+                    dataType: "text",
+                    success: function (data) {
+                        console.log(data);
+                        progressbar.progressbar("value", 100);
+                        clearTimeout(progressTimer);
 
-                if (val <= 99) {
-                    progressTimer = setTimeout(progress, 100);
-                }
+                    },
+                    timeout: 180000,
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                        clearTimeout(progressTimer);
+                    },
+                });
+
             }
 
         });
@@ -67,6 +82,7 @@
         #progressbar {
             margin-top: 20px;
         }
+
         .ui-dialog-titlebar-close {
             display: none;
         }
