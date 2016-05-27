@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HtmlPage1.html" />
     <Content Include="packages.config" />
     <Content Include="Handler1.ashx" />
     <None Include="Web.Debug.config">

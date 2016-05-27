@@ -39,21 +39,12 @@
                 });
             //进行function
             progressbar.progressbar({
-                //完成时function
-                complete: function () {
-                    clearTimeout(progressTimer);
-                    dialog
-                      .dialog("close");
-                    progressbar.progressbar("value", false);
-
-                    downloadButton.focus();
-                }
+                value:false
+               
             });
 
 
-            function progress() {
-                var val = progressbar.progressbar("value") || 0;
-              
+            function progress() {              
                 $.ajax({
                     type: "GET",
                     url: "Handler1.ashx",
@@ -61,8 +52,8 @@
                     dataType: "text",
                     success: function (data) {
                         console.log(data);
-                        progressbar.progressbar("value", 100);
                         clearTimeout(progressTimer);
+                        dialog.dialog("close");
 
                     },
                     timeout: 180000,

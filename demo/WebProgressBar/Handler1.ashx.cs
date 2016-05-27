@@ -17,7 +17,7 @@ namespace WebProgressBar
 
             string data = "ajax返回result";
             context.Response.ContentType = "text/plain";
-            //Thread.Sleep(5000);
+            Thread.Sleep(5000);
             context.Response.Write(data);
         }
 

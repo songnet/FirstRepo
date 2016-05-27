@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Progressbar - Indeterminate Value</title>
+    <link href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet" />
+    <script src="jquery-1.8.2.min.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script>
+  $(function() {
+    $( "#progressbar" ).progressbar({
+      value: false
+    });
+    //$( "button" ).on( "click", function( event ) {
+    //  var target = $( event.target ),
+    //    progressbar = $( "#progressbar" ),
+    //    progressbarValue = progressbar.find( ".ui-progressbar-value" );
+
+    //  if ( target.is( "#numButton" ) ) {
+    //    progressbar.progressbar( "option", {
+    //      value: Math.floor( Math.random() * 100 )
+    //    });
+    //  } else if ( target.is( "#colorButton" ) ) {
+    //    progressbarValue.css({
+    //      "background": '#' + Math.floor( Math.random() * 16777215 ).toString( 16 )
+    //    });
+    //  } else if ( target.is( "#falseButton" ) ) {
+    //    progressbar.progressbar( "option", "value", false );
+    //  }
+    //});
+  });
+    </script>
+    <style>
+        #progressbar .ui-progressbar-value {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="progressbar"></div>
+    <button id="numButton">Random Value - Determinate</button>
+    <button id="falseButton">Indeterminate</button>
+    <button id="colorButton">Random Color</button>
+
+
+</body>
+</html>
