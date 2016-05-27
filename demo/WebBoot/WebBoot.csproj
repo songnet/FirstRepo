@@ -98,6 +98,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\bootstrap-3.3.4-dist\css\bootstrap-theme.css.map" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\css\bootstrap.css.map" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -106,11 +112,108 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="scripts\ai.0.15.0-build58334.js" />
-    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Index.aspx" />
+    <Content Include="Scripts\ai.0.15.0-build58334.js" />
+    <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\bootstrap-responsive.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\bootstrap.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\faq.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\flexslider.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\font-awesome.min.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\parallax_slider\style.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\prettyPhoto.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\pricing.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\refineslide-theme-dark.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\refineslide.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\social.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\style.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\css\switcher.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\ico\favicon.ico" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\brushed_alu.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\crisp_paper_ruffles.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\darkdenim3.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\dark_wall.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\diamond_upholstery.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\egg_shell.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\light_toast.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\noise.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\noise_pattern_with_crosslines.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\purty_wood.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\retina_dust.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\scribble_light.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\subtle_stripes.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\textured_stripes.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\tileable_wood_texture.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\vertical_cloth.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\vichy.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\images\bg\washi.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\img\glyphicons-halflings.png" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\application.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-affix.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-alert.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-button.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-carousel.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-collapse.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-dropdown.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-modal.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-popover.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-scrollspy.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-tab.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-tooltip.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-transition.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\bootstrap-typeahead.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\custom.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\custom_refine_slider.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\google-code-prettify\prettify.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\google-code-prettify\prettify.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\hoverIntent.html" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\ios-orientation-change-fix.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.accordion.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.cslider.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.easing.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.fitvids.min.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.flexslider-min.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.gmap.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.isotope.min.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.mousewheel.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.refineslide.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.transit.min.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.ui.totop.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\jquery.waitforimages.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\modernizr.custom.28468.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\respond.min.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\superfish.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\assets\js\switcher.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\css\bootstrap-responsive.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\css\bootstrap-theme.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\css\bootstrap-theme.min.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\css\bootstrap.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\css\bootstrap.min.css" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\js\bootstrap-modal.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\js\bootstrap-transition.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\js\bootstrap.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\js\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\js\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\js\jquery.min.js" />
+    <Content Include="Scripts\bootstrap-3.3.4-dist\js\npm.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
