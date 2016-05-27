@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppIframe", "WebAppIfram
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{1AC3D233-F843-4E6F-A779-4374E4022952}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBoot", "WebBoot\WebBoot.csproj", "{EDE600EF-84DF-4D79-8795-8C664B246C5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1AC3D233-F843-4E6F-A779-4374E4022952}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AC3D233-F843-4E6F-A779-4374E4022952}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AC3D233-F843-4E6F-A779-4374E4022952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE600EF-84DF-4D79-8795-8C664B246C5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE600EF-84DF-4D79-8795-8C664B246C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE600EF-84DF-4D79-8795-8C664B246C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE600EF-84DF-4D79-8795-8C664B246C5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
