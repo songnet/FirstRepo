@@ -67,6 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HtmlPage1.html" />
+    <Content Include="jquery-1.11.3.min.js" />
+    <Content Include="jquery-ui-1.11.4\images\calendar.png" />
+    <Content Include="jquery-ui-1.11.4\datepicker-zh-TW.js" />
+    <Content Include="JqueryDatepicker.html" />
     <Content Include="packages.config" />
     <Content Include="Handler1.ashx" />
     <None Include="Web.Debug.config">
@@ -77,7 +81,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="jquery-1.8.2.min.js" />
     <Content Include="jquery-ui-1.11.4\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="jquery-ui-1.11.4\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
     <Content Include="jquery-ui-1.11.4\images\ui-bg_flat_10_000000_40x100.png" />
