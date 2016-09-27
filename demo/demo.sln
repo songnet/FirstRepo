@@ -15,10 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebAppli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBoot", "WebBoot\WebBoot.csproj", "{EDE600EF-84DF-4D79-8795-8C664B246C5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebLayer", "WebLayer\WebLayer.csproj", "{3870A296-2E10-47BF-B8FE-8FA36C11B489}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel", "Excel\Excel.csproj", "{07AA3795-98CF-49FD-96ED-4F10918EB9DF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,14 +45,6 @@ Global
 		{EDE600EF-84DF-4D79-8795-8C664B246C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDE600EF-84DF-4D79-8795-8C664B246C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDE600EF-84DF-4D79-8795-8C664B246C5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3870A296-2E10-47BF-B8FE-8FA36C11B489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3870A296-2E10-47BF-B8FE-8FA36C11B489}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3870A296-2E10-47BF-B8FE-8FA36C11B489}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3870A296-2E10-47BF-B8FE-8FA36C11B489}.Release|Any CPU.Build.0 = Release|Any CPU
-		{07AA3795-98CF-49FD-96ED-4F10918EB9DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07AA3795-98CF-49FD-96ED-4F10918EB9DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07AA3795-98CF-49FD-96ED-4F10918EB9DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07AA3795-98CF-49FD-96ED-4F10918EB9DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
