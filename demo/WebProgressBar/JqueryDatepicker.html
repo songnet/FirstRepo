@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>JqueryUIDatepicker</title>
+    <link href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet" />
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script src="jquery-ui-1.11.4/datepicker-zh-TW.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                showOn: "button",
+                buttonImage: "jquery-ui-1.11.4/images/calendar.png",
+                buttonImageOnly: true,
+                dateFormat: "yy-mm-dd",
+                regional: "zh-TW",
+                buttonText: "Select date"
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Date: <input type="text" id="datepicker"></p>
+</body>
+</html>

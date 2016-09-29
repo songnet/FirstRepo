@@ -66,8 +66,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2Bar.html" />
+    <Content Include="Bar.html" />
     <Content Include="packages.config" />
     <Content Include="ajax\Handler.ashx" />
+    <Content Include="Scripts\My.js" />
+    <Content Include="WebFormAjaxHandlerTest.aspx" />
+    <Content Include="123" />
+    <Content Include="Handler\DataHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -82,8 +88,6 @@
     <Content Include="Scripts\echarts\echarts.js" />
     <Content Include="Scripts\echarts\esl.js" />
     <Content Include="Scripts\jquery-1.8.3.min.js" />
-    <Content Include="Scripts\MyEcharts.js" />
-    <Content Include="Scripts\WapCharts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

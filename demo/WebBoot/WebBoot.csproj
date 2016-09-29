@@ -106,6 +106,7 @@
     <Content Include="css\bootstrap-datetimepicker.min.css" />
     <Content Include="hovertitle - 复制.html" />
     <Content Include="hovertitle.html" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="HtmlPage123.html" />
     <Content Include="HtmlPage2.html" />
     <Content Include="images\tipsy.gif" />
