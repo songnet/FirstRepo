@@ -94,32 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bootstrap-datetimepicker.html" />
-    <Content Include="bootstrap\css\bootstrap-theme.css" />
-    <Content Include="bootstrap\css\bootstrap-theme.min.css" />
-    <Content Include="bootstrap\css\bootstrap.css" />
-    <Content Include="bootstrap\css\bootstrap.min.css" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="bootstrap\js\bootstrap.js" />
-    <Content Include="bootstrap\js\bootstrap.min.js" />
-    <Content Include="css\bootstrap-datetimepicker.css" />
-    <Content Include="css\bootstrap-datetimepicker.min.css" />
-    <Content Include="hovertitle - 复制.html" />
-    <Content Include="hovertitle.html" />
     <Content Include="HtmlPage1.html" />
     <Content Include="HtmlPage123.html" />
-    <Content Include="HtmlPage2.html" />
-    <Content Include="images\tipsy.gif" />
-    <Content Include="index.html" />
-    <Content Include="jquery-ui-1.12.0.custom\jquery-ui-1.12.0.css" />
-    <Content Include="jquery-ui-1.12.0.custom\jquery-ui.min.css" />
-    <Content Include="jqueryuitips.html" />
-    <Content Include="jquery\jquery-1.11.3.min.js" />
-    <Content Include="jquery\jquery-1.8.3.min.js" />
-    <Content Include="jquery\jquery-ui-1.12.0.js" />
-    <Content Include="js\bootstrap-datetimepicker.js" />
-    <Content Include="js\bootstrap-datetimepicker.min.js" />
-    <Content Include="js\locales\bootstrap-datetimepicker.zh-CN.js" />
     <Content Include="packages.config" />
     <Content Include="Scripts\bootstrap-3.3.4-dist\css\bootstrap-theme.css.map" />
     <Content Include="Scripts\bootstrap-3.3.4-dist\css\bootstrap.css.map" />
@@ -128,13 +104,6 @@
     <Content Include="Scripts\bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Scripts\bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Scripts\bootstrap-3.3.4-dist\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="tipsy\jquery.tipsy.js" />
-    <Content Include="tipsy\tipsy.css" />
-    <Content Include="tipsy\tipsy_bak.css" />
-    <Content Include="自定义titile.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
